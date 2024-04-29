@@ -22,6 +22,8 @@ import {
   Grid,
   Code,
 } from "@chakra-ui/react";
+import { Marquee } from "@devnomic/marquee";
+import "@devnomic/marquee/dist/index.css";
 import { AddIcon } from "@chakra-ui/icons";
 import { FaPlay } from "react-icons/fa";
 import heart from "../assets/heart.svg";
@@ -58,6 +60,7 @@ import { RxPencil1 } from "react-icons/rx";
 import { CiMail } from "react-icons/ci";
 import { FiPlus } from "react-icons/fi";
 import Footer from "../Components/Footer";
+import Cod from "../Components/Cod";
 const HomePage = () => {
   const [isLiked, setIsLiked] = useState(false);
 
@@ -799,10 +802,207 @@ const HomePage = () => {
         </Box>
       </Flex>
       <Divider />
-      <Box maxW={"450px"} mx={"auto"} my={"70px"}>
+      <Box mx={"auto"} my={"70px"}>
         <Text fontWeight="500" fontSize="30px">
           Code the perfect design for each project using Atomize.
         </Text>
+        <Box>
+          <Cod />
+        </Box>
+        <Box
+          maxW={"315px"}
+          position="absolute"
+          bottom="1850px"
+          right="50px"
+          maxHeight={"600px"}
+        >
+          <Marquee fade={true} direction="up">
+            <div>
+              <Box
+                // maxW={"md"}
+                // w={"full"}
+                bg={useColorModeValue("white", "gray.900")}
+                boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px"}
+                rounded={"lg"}
+                px={8}
+                py={7}
+                textAlign={"center"}
+              >
+                <Avatar
+                  size={"lg"}
+                  src={avatar}
+                  alt={"Avatar Alt"}
+                  mb={4}
+                  mt={3}
+                  pos={"relative"}
+                  _after={{
+                    content: '""',
+                    w: 1.5,
+                    h: 1.5,
+                    bg: "green.300",
+                    border: "1px solid white",
+                    rounded: "full",
+                    pos: "absolute",
+                    bottom: 1,
+                    right: 1,
+                  }}
+                />
+                <Heading fontSize={"xl"} fontFamily={"body"}>
+                  Meagan Fisher
+                </Heading>
+                <Text
+                  fontWeight={400}
+                  fontSize={"xs"}
+                  color={"gray.500"}
+                  mb={4}
+                  mt={2}
+                >
+                  Engineering Manager
+                </Text>
+
+                <Stack direction={"row"} spacing={4} mt={10}>
+                  <HStack
+                    as={Button}
+                    flex={1}
+                    fontSize={"sm"}
+                    rounded={"full"}
+                    bg={"#0284fe"}
+                    color={"white"}
+                    _hover={{
+                      bg: "#006fd6",
+                    }}
+                    spacing={5}
+                  >
+                    <Text>Follow</Text>
+                    <MdOutlineAdd style={{ fontSize: "1.5em" }} />
+                  </HStack>
+
+                  <HStack
+                    as={Button}
+                    flex={1}
+                    fontSize={"sm"}
+                    rounded={"full"}
+                    _focus={{
+                      bg: "gray.200",
+                    }}
+                    spacing={5}
+                    border={"1px"}
+                    borderColor={"gray.400"}
+                  >
+                    <Text>Message</Text>
+                    <FiMessageSquare style={{ fontSize: "1.7em" }} />
+                  </HStack>
+                </Stack>
+              </Box>
+            </div>
+            <div>
+              <Flex
+                p="5"
+                alignItems="center"
+                direction={"row"}
+                justifyContent={"space-between"}
+                bg={"white"}
+                borderRadius={"5px"}
+              >
+                <HStack>
+                  <Avatar
+                    src={avatar2}
+                    name={"Meagan Fisher"}
+                    mr="3"
+                    size={"xs"}
+                  />
+                  <Box fontWeight="600" fontSize="sm">
+                    {"Meagan Fisher"}
+                  </Box>
+                </HStack>
+                <IconButton
+                  icon={isLiked ? <FaHeart color="red" /> : <FaRegHeart />}
+                  onClick={handleLikeToggle}
+                  aria-label="Like"
+                  variant="ghost"
+                />
+              </Flex>
+            </div>
+            <div>
+              <Box
+                // maxW={"md"}
+                // w={"full"}
+                bg={useColorModeValue("white", "gray.900")}
+                boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px"}
+                rounded={"lg"}
+                px={8}
+                py={7}
+                textAlign={"center"}
+              >
+                <Avatar
+                  size={"lg"}
+                  src={avatar}
+                  alt={"Avatar Alt"}
+                  mb={4}
+                  mt={3}
+                  pos={"relative"}
+                  _after={{
+                    content: '""',
+                    w: 1.5,
+                    h: 1.5,
+                    bg: "green.300",
+                    border: "1px solid white",
+                    rounded: "full",
+                    pos: "absolute",
+                    bottom: 1,
+                    right: 1,
+                  }}
+                />
+                <Heading fontSize={"xl"} fontFamily={"body"}>
+                  Meagan Fisher
+                </Heading>
+                <Text
+                  fontWeight={400}
+                  fontSize={"xs"}
+                  color={"gray.500"}
+                  mb={4}
+                  mt={2}
+                >
+                  Engineering Manager
+                </Text>
+
+                <Stack direction={"row"} spacing={4} mt={10}>
+                  <HStack
+                    as={Button}
+                    flex={1}
+                    fontSize={"sm"}
+                    rounded={"full"}
+                    bg={"#0284fe"}
+                    color={"white"}
+                    _hover={{
+                      bg: "#006fd6",
+                    }}
+                    spacing={5}
+                  >
+                    <Text>Follow</Text>
+                    <MdOutlineAdd style={{ fontSize: "1.5em" }} />
+                  </HStack>
+
+                  <HStack
+                    as={Button}
+                    flex={1}
+                    fontSize={"sm"}
+                    rounded={"full"}
+                    _focus={{
+                      bg: "gray.200",
+                    }}
+                    spacing={5}
+                    border={"1px"}
+                    borderColor={"gray.400"}
+                  >
+                    <Text>Message</Text>
+                    <FiMessageSquare style={{ fontSize: "1.7em" }} />
+                  </HStack>
+                </Stack>
+              </Box>
+            </div>
+          </Marquee>
+        </Box>
       </Box>
       <Divider />
       <Box maxW={"600px"} mx={"auto"} my={"70px"}>
